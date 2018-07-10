@@ -1,2 +1,3 @@
 HTTP_PROXY=http://192.168.51.16:8080
 HTTPS_PROXY=https://192.168.51.16:8080
+MAVEN_MIRROR_URL=http://nexus3.nexus.svc:8081/repository/maven-public/
