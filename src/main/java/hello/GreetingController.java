@@ -21,7 +21,7 @@ public class GreetingController {
             this.createArrays();
         }
 
-        if ("liveness".equals(name) && counter.get() > 10L ){
+        if ("liveness".equals(name) && counter.get() > 1000000L ){
             try {
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
