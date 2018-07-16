@@ -21,6 +21,15 @@ public class GreetingController {
             this.createArrays();
         }
 
+        if ("liveness".equals(name) && counter.get() > 10L ){
+            try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }
+
         
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
