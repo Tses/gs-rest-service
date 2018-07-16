@@ -14,7 +14,31 @@ public class GreetingController {
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         System.out.println("Greeting called with value:" + name);
+
+
+
+        if ("oom".equals( name)){
+            this.createArrays();
+        }
+
+        
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
     }
+
+
+
+    private void createArrays()
+	{
+		int arraySize = 20;
+
+		// Create arrays in an infinite loop
+		while (true)
+		{
+			System.out.println("Available memory (in bytes): " + Runtime.getRuntime().freeMemory());
+			int[] fillMemory = new int[arraySize];
+			arraySize = arraySize * 5;
+		}
+	}
+
 }
